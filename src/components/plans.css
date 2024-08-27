@@ -1,0 +1,93 @@
+.plan-container{
+    margin: 5rem 0 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    background: #ffffff;
+    color: white;
+}
+
+.plan-card {
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    color: white;
+    background: #857af9;
+    margin: 2rem auto;
+}
+.title-price {
+    position: relative;
+    margin: 2rem 0 0 2rem;
+}
+.price {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2rem;
+}
+.price p {
+    font-size: 2rem;
+}
+
+.offers-list {
+    margin: 6rem 0 0 2rem;
+}
+.offers-list ul {
+    margin-top: 1rem;
+}
+
+.offers-list ul li {
+    margin: 1rem 0 0 1rem;
+    list-style: none;
+}
+.offers-list ul li::before {
+    content: '\2713';
+    color: #44f944;
+    font-size: 1.2rem;
+
+}
+.offers-list a {
+    position: relative;
+    top: 4rem;
+    left: 2rem;
+    margin: 4rem;
+    padding: 1rem;
+    background: black;
+    color: white;
+    border-radius: 10px 20px;
+}
+.offers-list a:hover{
+    background: white;
+    color: black;
+}
+
+
+@media (max-width: 768px){
+    .plan-container{
+        display: flex;
+        margin: auto;
+        padding: 0;
+    }
+    .plan-card{
+        width: 270px;
+        height: 470px;
+        margin-bottom: 1.5rem;
+        padding-bottom: 6rem;
+    }
+    .price {
+        margin-top: 1rem;
+    }
+    .offers-list {
+        margin: 2rem 0 0 2rem;
+    }
+    .offers-list ul li {
+        margin: 0.5rem 0 0 0rem;
+        font-size: small;
+    }
+    .offers-list a {
+        left: 3rem;
+        margin: auto;
+    }
+}
+

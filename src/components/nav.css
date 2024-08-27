@@ -1,0 +1,114 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0rem;
+    z-index: 2;
+    box-shadow: -2px 1px 2px 1px #8f8f8f;
+    background: #eeedfe;
+    left: 0;
+  }
+  
+  .nav-container h1 {
+    font-size: 2.5rem;
+    color: #564FCC;
+  }
+  
+  /* Nav styles */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navlink {
+    list-style: none;
+    margin: 0 1rem;
+  }
+  
+  .navlink .a {
+    text-decoration: none;
+    color: #564FCC;
+  }
+
+  @media (max-width: 768px) {
+  
+    .nav-container {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 4rem;
+    }
+    .nav-container h1{
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+  
+    .nav {
+      flex-direction: column;
+      width: 10rem;
+      height: 15rem;
+      transform: translateX(200rem);
+      overflow-x: hidden;
+      transition: 0.3s cubic-bezier(1, 0.01, 0.2, 1);
+      position: fixed;
+      right: 1rem;
+      top: 4.5rem;
+      background: rgba(212, 196, 196, 0.2); 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+    }
+    .show{
+      transform: translateX(0rem);
+    }
+  
+    .mobile-menu{
+      display: block;
+      margin-right: 12px;
+      font-size: 1.3rem;
+    }
+  
+    .mobile-menu .menu::before{
+      content: '\2630';
+      font-size: 20px;
+      color: black;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      margin: auto;
+      font-weight: 600;
+    }
+  
+    .navlink {
+      margin: 1rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  
+      .nav {
+          background: rgba(209, 204, 204, 0.2); 
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          -webkit-backdrop-filter: blur(10px);
+          border-radius: 10px;
+        }
+      .nav-container {
+        padding: 0rem;
+        align-items: center;
+      }
+    
+      .navlink {
+        margin: 0.5rem 0;
+      }
+    }
