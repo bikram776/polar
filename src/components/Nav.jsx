@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-function Nav() {
+function Nav({onLetgo}) {
   const [menuShow, setMenushow] = useState(0);
   function toggleMenu(){
       setMenushow(!menuShow);
@@ -13,6 +13,7 @@ function Nav() {
         <div className="nav-container">
         <h1>Polar</h1>
         <nav className={`nav ${menuShow ? "show" : ""}`}>
+          <button onClick={onLetgo}>Lets go</button>
           <ul className="nav-links">
             <li className="navlink"><Link to='/' className='a' href="#">Home</Link></li>
             <li className="navlink"><Link to='/info' className='a' href="#">Info</Link></li>
