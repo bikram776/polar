@@ -9,16 +9,29 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
 import Nav from './components/Nav';
+import Signup from './components/SignupForm';
+import { useState } from 'react';
 
 function App() {
 
+  const [showSignup, setShowSignup] = useState(false);
+  const handleGetStarted =()=>{
+    setShowSignup(!false);
+    document.body.style.overflow = 'hidden';
+  };
+  const handleCloseSignup = () =>{
+    setShowSignup(false);
+    document.body.style.overflow = 'auto';
+  }
+
   return (
     <div className='App'>
-      <Nav/>
+      <Nav onLetgo={(handleGetStarted)}/>
+      {showSignup && <Signup onClose={handleCloseSignup}/>}
+
       
       <Routes>
       <Route path='/' element={<Home/>}/>
-        <Route path='/' element={<Header/>}/>
         <Route path='/info' element={<Info/>}/>
         <Route path='/plans' element={<Plans/>}/>
         <Route path='/story' element={<Story/>}/>

@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
-function Header() {
+function Header({onGetstarted}) {
     // const [menuShow, setMenushow] = useState(0);
     // function toggleMenu(){
     //     setMenushow(!menuShow);
     // };
+    
 
   return (
     <div className="header">
@@ -32,7 +33,7 @@ function Header() {
         <div className="hero-text">
           <h1>EXPLORE THE UNCHARTED</h1>
           <p>Discover the world's most remote and untouched destinations</p>
-          <a>Get Started</a>
+          <a href='#' onClick={onGetstarted}>Get Started</a>
         </div>
         <div className="hero-img">
           <img alt="hikeImage" src={Hiking} />

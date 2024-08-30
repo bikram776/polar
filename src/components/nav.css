@@ -40,6 +40,14 @@
     color: #564FCC;
   }
 
+  .nav button {
+    padding: 10px;
+    border: 10px cornflowerblue;
+    background: #6c63ff;
+    color: white;
+    border-radius: 50px;
+}
+
   @media (max-width: 768px) {
   
     .nav-container {
